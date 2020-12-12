@@ -1,0 +1,15 @@
+{
+  "name": "Rotating Pop Team Epic",
+  "version": "0.1",
+  "description": "When Click, Rotate POPUKO Exciting!!!",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "itm_follow2.png"
+    }
+  },
+  "icons": {
+    "128": "itm_follow2.png"
+  }
+}

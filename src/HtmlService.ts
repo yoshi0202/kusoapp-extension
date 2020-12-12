@@ -1,8 +1,15 @@
 export class HtmlService {
   private buttonCount: number = 0
-  private initSpeed: number = 10
-  protected maxCount: number = 10
+  private speed: number = 10
   
+  init(pngImg: HTMLElement, gifImg: HTMLElement, initSpeed: number): void {
+    this.setCount(0)
+    this.setSpeed(0)
+    this.changeRotateSpeedToElement(pngImg)
+    this.toggleDisplayImg(gifImg, pngImg)
+    this.setSpeed(initSpeed)
+  }
+
   setCount(num: number): void {
     this.buttonCount = num 
   }
@@ -16,16 +23,11 @@ export class HtmlService {
   }
 
   setSpeed(num: number): void {
-    this.initSpeed = num 
+    this.speed = num 
   }
 
   divSpeed(): void {
-    this.initSpeed = this.initSpeed / 2
-    console.log(this.initSpeed)
-  }
-
-  getMaxCount(): number {
-    return this.maxCount
+    this.speed = this.speed / 2
   }
 
   changeDisplayStyle(elem: HTMLElement, style: string) {
@@ -33,7 +35,7 @@ export class HtmlService {
   }
 
   changeRotateSpeedToElement(elem: HTMLElement) {
-    elem.style.animation = `rotation ${this.initSpeed}s infinite linear`
+    elem.style.animation = `rotation ${this.speed}s infinite linear`
   }
 
   toggleDisplayImg(noneElm: HTMLElement, blockElm: HTMLElement) {

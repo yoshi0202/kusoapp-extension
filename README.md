@@ -1,1 +1,3 @@
 # kusoapp-extension
+
+クソアプリのリポジトリ

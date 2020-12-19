@@ -30,15 +30,15 @@ export class HtmlService {
     this.speed = this.speed / 2
   }
 
-  changeDisplayStyle(elem: HTMLElement, style: string) {
+  changeDisplayStyle(elem: HTMLElement, style: string): void {
     elem.style.display = style
   }
 
-  changeRotateSpeedToElement(elem: HTMLElement) {
+  changeRotateSpeedToElement(elem: HTMLElement): void {
     elem.style.animation = `rotation ${this.speed}s infinite linear`
   }
 
-  toggleDisplayImg(noneElm: HTMLElement, blockElm: HTMLElement) {
+  toggleDisplayImg(noneElm: HTMLElement, blockElm: HTMLElement): void {
     this.changeDisplayStyle(noneElm, "none")
     this.changeDisplayStyle(blockElm, "block")
   }

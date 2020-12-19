@@ -6,7 +6,7 @@ const wrapper:HTMLElement | null = document.querySelector("#content_wrapper")
 const pngImg:HTMLElement | null = document.querySelector(".round_png")
 const gifImg:HTMLElement | null = document.querySelector(".round_gif")
 
-wrapper && pngImg && gifImg && (wrapper.onclick = function() {
+wrapper && pngImg && gifImg && (wrapper.onclick = function(): void {
   if(gifImg.style.display === "block") {
     htmlService.init(pngImg, gifImg, MAX_COUNT)
     return
